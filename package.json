@@ -4,6 +4,7 @@
   "description": "First try",
   "main": "app.js",
   "scripts": {
+    "start": "nodemon app.js",
     "test": "Test"
   },
   "repository": {
@@ -28,5 +29,8 @@
     "express-partials": "^0.3.0",
     "express-session": "^1.15.3",
     "redis": "^2.7.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
   }
 }
