@@ -1,0 +1,22 @@
+{
+  "name": "reddit-daily-programming",
+  "version": "1.0.0",
+  "description": "First try",
+  "main": "app.js",
+  "scripts": {
+    "test": "Test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angelmirandazambrana/Reddit-daily-pogramming.git"
+  },
+  "author": "Angel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/angelmirandazambrana/Reddit-daily-pogramming/issues"
+  },
+  "homepage": "https://github.com/angelmirandazambrana/Reddit-daily-pogramming#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
