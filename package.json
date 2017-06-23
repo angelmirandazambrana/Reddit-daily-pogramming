@@ -4,7 +4,7 @@
   "description": "First try",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js -i ejs",
+    "start": "nodemon --watch middleware --watch routes --watch views -e js,ejs app.js ",
     "test": "Test"
   },
   "repository": {
@@ -28,7 +28,8 @@
     "express": "^4.15.3",
     "express-partials": "^0.3.0",
     "express-session": "^1.15.3",
-    "redis": "^2.7.1"
+    "redis": "^2.7.1",
+    "reload": "^1.1.6"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
