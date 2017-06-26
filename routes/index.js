@@ -1,5 +1,6 @@
 const fs=require('fs');
 var util=require('../middleware/utilities');
+var config=require('../config');
 module.exports.index=index;
 module.exports.e1=e1;
 module.exports.e2=e2;
@@ -48,7 +49,7 @@ function processDataE1(req, res){
                 throw err;
             }
         })        
-    res.redirect('/home');
+    res.redirect('/e1');
 })}
 
 function login (req, res){
@@ -68,7 +69,7 @@ function loginProcess(req, res){
     else {
         req.session.isAuthenticated = false;
         req.flash('error','Wrong username or password');
-        res.redirect('/login');
+        res.redirect(config.routes.login);
     };
 }
 

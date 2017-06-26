@@ -1,8 +1,10 @@
+var config=require('../config');
+
 module.exports.csrf=csrf;
 module.exports.authenticated=authenticated;
 module.exports.requireAuthentication=requireAuthentication;
 module.exports.logout=logout;
-
+module.exports.templateRoutes=templateRoutes;
 
 
 function csrf(req, res, next) {
@@ -22,7 +24,7 @@ function requireAuthentication(req, res, next){
     if (req.session.isAuthenticated){
         next();
     } else {
-        res.redirect('/login');
+        res.redirect(config.routes.login);
     }
 
 }
@@ -31,3 +33,8 @@ function logout (session) {
     session.isAuthenticated=false;
     delete session.userName;
 };
+
+function templateRoutes(req, res, next){
+    res.locals.routes=config.routes;
+    next();
+}
